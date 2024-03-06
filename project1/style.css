@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+:root {
+    --successcolor: green;
+    --errorcolor: orangered;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -48,4 +53,37 @@ h1 {
     display: block;
     width: 100%;
     padding: 10px;
+}
+
+.form_control.success input {
+    border-color: var(--successcolor);
+}
+
+.form_control.error input {
+    border-color: var(--errorcolor);
+}
+
+.form_control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--errorcolor);
+    visibility: hidden;
+}
+
+.form_control.error small {
+    visibility: visible;
+}
+
+.form button {
+    color: white;
+    background-color: navy;
+    border: 2px solid navy;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
 }
